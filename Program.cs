@@ -27,13 +27,8 @@ namespace assessment1
                 myStack.Push("blue"); //3
                 myStack.Push("green"); //4
                 myStack.Push("purple");
-                myStack.Push("orange");
-                myStack.Push("red");
-                myStack.Push("yellow");
-                myStack.Push("blue");
-                myStack.Push("yellow");
-                myStack.Push("purple");
-
+                
+                //specifying the task to be done
                 Console.WriteLine("1.ADD ");
                 Console.WriteLine("2.REMOVE ");
                 Console.WriteLine("3.Dispense colour ");
@@ -44,11 +39,10 @@ namespace assessment1
                 Console.WriteLine("8.Changing the colour and displaying their count");
                 Console.WriteLine("9.Fresh Picking ");
                 Console.WriteLine("10.Rainbow Dispensary ");
-                Console.WriteLine("enter any number from the above");
                 string option = "";
-                int opt = Convert.ToInt32(Console.ReadLine());
-                do
-                {
+                do {
+                    Console.WriteLine("enter any number from the above");
+                    int opt = Convert.ToInt32(Console.ReadLine());
                     switch (opt)
                     {
                         case 1:
@@ -106,10 +100,13 @@ namespace assessment1
                         default:
                             Console.WriteLine("specify in correct format. ");
                             break;
-                            Console.WriteLine("do you want to proceed with chocolate dispensary! yes or no");
-                            option = Console.ReadLine();
+
                     }
+
+                    Console.WriteLine("do you want to proceed with chocolate dispensary! yes or no");
+                    option = Console.ReadLine();
                 } while (string.Equals("yes", option));
+                
                 if(string.Equals("no", option))
                 {
                     Console.WriteLine("thanks for playing!");
